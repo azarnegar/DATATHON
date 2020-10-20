@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.8.000">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.8.000" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_csv" compatibility="9.8.000" expanded="true" height="68" name="Read CSV" width="90" x="45" y="34">
+        <parameter key="csv_file" value="C:\Teaching\Datathon\Allyears-Monthly.csv"/>
+        <parameter key="column_separators" value=","/>
+        <parameter key="trim_lines" value="false"/>
+        <parameter key="use_quotes" value="true"/>
+        <parameter key="quotes_character" value="&quot;"/>
+        <parameter key="escape_character" value="\"/>
+        <parameter key="skip_comments" value="true"/>
+        <parameter key="comment_characters" value="#"/>
+        <parameter key="starting_row" value="1"/>
+        <parameter key="parse_numbers" value="true"/>
+        <parameter key="decimal_character" value="."/>
+        <parameter key="grouped_digits" value="false"/>
+        <parameter key="grouping_character" value=","/>
+        <parameter key="infinity_representation" value=""/>
+        <parameter key="date_format" value=""/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="encoding" value="windows-1252"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Jan-17.true.real.attribute"/>
+          <parameter key="1" value="Feb-17.true.real.attribute"/>
+          <parameter key="2" value="Mar-17.true.real.attribute"/>
+          <parameter key="3" value="Apr-17.true.real.attribute"/>
+          <parameter key="4" value="May-17.true.real.attribute"/>
+          <parameter key="5" value="Jun-17.true.real.attribute"/>
+          <parameter key="6" value="Jul-17.true.real.attribute"/>
+          <parameter key="7" value="Aug-17.true.real.attribute"/>
+          <parameter key="8" value="Sep-17.true.real.attribute"/>
+          <parameter key="9" value="Jan-18.true.real.attribute"/>
+          <parameter key="10" value="Feb-18.true.real.attribute"/>
+          <parameter key="11" value="Mar-18.true.real.attribute"/>
+          <parameter key="12" value="Apr-18.true.real.attribute"/>
+          <parameter key="13" value="May-18.true.real.attribute"/>
+          <parameter key="14" value="Jun-18.true.real.attribute"/>
+          <parameter key="15" value="Jul-18.true.real.attribute"/>
+          <parameter key="16" value="Aug-18.true.real.attribute"/>
+          <parameter key="17" value="Sep-18.true.real.attribute"/>
+          <parameter key="18" value="Jan-19.true.real.attribute"/>
+          <parameter key="19" value="Feb-19.true.real.attribute"/>
+          <parameter key="20" value="Mar-19.true.real.attribute"/>
+          <parameter key="21" value="Apr-19.true.real.attribute"/>
+          <parameter key="22" value="May-19.true.real.attribute"/>
+          <parameter key="23" value="Jun-19.true.real.attribute"/>
+          <parameter key="24" value="Jul-19.true.real.attribute"/>
+          <parameter key="25" value="Aug-19.true.real.attribute"/>
+          <parameter key="26" value="Sep-19.true.real.attribute"/>
+          <parameter key="27" value="Jan-20.true.real.attribute"/>
+          <parameter key="28" value="Feb-20.true.real.attribute"/>
+          <parameter key="29" value="Mar-20.true.real.attribute"/>
+          <parameter key="30" value="Apr-20.true.real.attribute"/>
+          <parameter key="31" value="May-20.true.real.attribute"/>
+          <parameter key="32" value="Jun-20.true.real.attribute"/>
+          <parameter key="33" value="Jul-20.true.real.attribute"/>
+          <parameter key="34" value="Aug-20.true.real.attribute"/>
+          <parameter key="35" value="Sep-20.true.real.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+        <parameter key="datamanagement" value="double_array"/>
+        <parameter key="data_management" value="auto"/>
+      </operator>
+      <connect from_op="Read CSV" from_port="output" to_port="result 1"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+    </process>
+  </operator>
+</process>
